@@ -54,14 +54,14 @@ FragmentTransaction fragmentTransaction;
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, new MainFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.addToBackStack(null).commit();
         }
 
         if (item.getItemId() == R.id.members){
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, new MembersFragment());
-            fragmentTransaction.commit();
+            fragmentTransaction.addToBackStack(null).commit();
         }
 
 

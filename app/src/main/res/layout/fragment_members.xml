@@ -24,11 +24,11 @@
         android:layout_marginRight="34dp"
         android:layout_marginBottom="34dp"
         android:clickable="true"
-        android:onClick="onClick"
         android:src="@drawable/ic_addmember"
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:focusable="true" />
 
 
 
