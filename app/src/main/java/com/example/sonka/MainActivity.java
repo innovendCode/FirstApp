@@ -42,7 +42,7 @@ FragmentTransaction fragmentTransaction;
 
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragment_container, new MainFragment());
+        fragmentTransaction.replace(R.id.fragment_container, new MainFragment());
         fragmentTransaction.commit();
 
     }
