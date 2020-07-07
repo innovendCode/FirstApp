@@ -4,41 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".AddMemberFragment">
+    tools:context=".AddMemberFragment"
+    android:orientation="vertical">
 
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:paddingLeft="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/btn_add_member"
         android:ems="10"
         android:hint="Full Name"
-        android:inputType="textPersonName" />
-
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"/>
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/btn_add_member"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"/>
 
     <Button
         android:id="@+id/btn_addMember"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
         android:background="@color/cardview_shadow_start_color"
         android:text="Add Member"
-        android:textSize="20dp" />
+        android:theme="@style/Animation.Design.BottomSheetDialog"/>
 
 </LinearLayout>
