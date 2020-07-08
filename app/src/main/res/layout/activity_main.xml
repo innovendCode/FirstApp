@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:id="@+id/drawer">
 
     <include
@@ -17,13 +16,13 @@
         android:layout_width="match_parent"
         layout="@layout/drawer_toolbar"/>
 
-<com.google.android.material.navigation.NavigationView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/navigationView"
-    app:headerLayout="@layout/drawer_header"
-    app:menu="@menu/drawer_menu"
-    android:layout_gravity="start"
-    android:fitsSystemWindows="true"/>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

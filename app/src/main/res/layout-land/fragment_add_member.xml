@@ -15,7 +15,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="52dp"
         android:layout_marginRight="40dp"
-        android:background="@drawable/btn_add_member"
+        android:background="@drawable/custom_text_edit"
         android:ems="10"
         android:hint="Full Name"
         android:inputType="textPersonName"
@@ -24,7 +24,7 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@drawable/btn_add_member"
+        android:background="@drawable/custom_text_edit"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"/>
