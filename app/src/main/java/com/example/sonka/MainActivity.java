@@ -9,13 +9,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AddMemberFragment.onFragAddMemberBtn {
 NavigationView navigationView;
 Toolbar toolbar;
 DrawerLayout drawerLayout;
@@ -69,4 +70,11 @@ FragmentTransaction fragmentTransaction;
     }
 
 
+    @Override
+    public void addMemberBtn() {
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, new MainFragment());
+        fragmentTransaction.addToBackStack(null).commit();
+    }
 }
