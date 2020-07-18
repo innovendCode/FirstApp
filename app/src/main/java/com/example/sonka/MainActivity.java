@@ -16,13 +16,15 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AddMemberFragment.onFragAddMemberBtn {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, AddMemberFragment.FragmentAddNameListener {
 NavigationView navigationView;
 Toolbar toolbar;
 DrawerLayout drawerLayout;
 ActionBarDrawerToggle actionBarDrawerToggle;
 FragmentManager fragmentManager;
 FragmentTransaction fragmentTransaction;
+MyDatabaseHelper myDatabaseHelper;
+AddMemberFragment addMemberFragment;
 
 
     @Override
@@ -32,6 +34,8 @@ FragmentTransaction fragmentTransaction;
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawer);
         navigationView = findViewById(R.id.navigationView);
+
+        myDatabaseHelper = new MyDatabaseHelper(this);
 
         setSupportActionBar(toolbar);
         navigationView.setNavigationItemSelectedListener(this);
@@ -71,10 +75,12 @@ FragmentTransaction fragmentTransaction;
 
 
     @Override
-    public void addMemberBtn() {
-        fragmentManager = getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, new MainFragment());
-        fragmentTransaction.addToBackStack(null).commit();
+    public void addMemberDb(CharSequence addName) {
+    addMemberFragment.insertMemberToDb(addName);
+    }
+
+    @Override
+    public void addRoleDb(CharSequence addRole) {
+    addMemberFragment.insertMemberToDb(addRole);
     }
 }
